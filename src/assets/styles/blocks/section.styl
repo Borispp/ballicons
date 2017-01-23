@@ -1,0 +1,74 @@
+.section
+  padding 70px 0
+  overflow hidden
+  clearfix()
+
+  .content
+    width 520px
+    float left
+    font-size 16px
+    line-height 25px
+
+    .headline
+      font-family 'PT Sans'
+      font-size 50px
+      line-height 48px
+      font-weight 600
+      padding-bottom 10px
+
+    .description
+      font-family 'PT Sans'
+      font-size 28px
+      color $orange
+      padding-bottom 36px
+
+    .list,
+    ul
+      margin-top 20px
+      margin-bottom 12px
+
+      li
+        font-size 16px
+        font-weight 600
+        padding-bottom 18px
+        padding-left 24px
+        position relative
+
+        &:before
+          content ''
+          display inline-block
+          vertical-align top
+          position absolute
+          left 0
+          top 6px
+          sprite($s-arrow)
+          margin-right 12px
+
+  .image
+    width calc(100% - 600px)
+    float right
+
+
+.preview
+  margin-top -60px
+  background url('../images/content/header.jpg')
+  background-attachment fixed
+  height 350px
+  background-size cover
+  padding 150px 0 60px
+  box-sizing border-box
+  text-align center
+
+  .headline
+    color #fff
+    font-family 'PT Sans'
+    font-size 50px
+    line-height 48px
+    font-weight 600
+    padding-bottom 0
+
+  .description
+    font-family 'PT Sans'
+    font-size 28px
+    color $orange
+    padding-bottom 36px

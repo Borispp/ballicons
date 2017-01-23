@@ -1,0 +1,70 @@
+.footer-main
+  background #001B36
+  color #fff
+  padding 70px 0
+
+  .base-col
+    clearfix()
+
+  .copyrights
+    float left
+    width 400px
+
+    .site-logo
+      margin-bottom 54px
+
+  .menu
+    width 360px
+    float left
+    font-size 0
+
+    ul
+      display inline-block
+      width 50%
+
+    a
+      color #fff
+      text-decoration none
+      font-size 16px
+      line-height 37px
+      opacity .7
+      transition opacity .2s
+
+      &:hover
+        opacity 1
+
+  .social
+    width 250px
+    font-size 16px
+    float right
+
+    .icon
+      display inline-block
+      vertical-align middle
+      position relative
+      width 48px
+      height 48px
+
+      &:before
+        content ''
+        display inline-block
+        position absolute
+        left 50%
+        top 50%
+        transform translate(-50%,-50%)
+
+      &.fb:before
+        sprite($s-fb)
+
+      &.tw:before
+        sprite($s-tw)
+
+      &.yb:before
+        sprite($s-yb)
+
+      &.gp:before
+        sprite($s-gp)
+
+    .icons
+      margin-top 12px
+      margin-left -12px
