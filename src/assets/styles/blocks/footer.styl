@@ -1,70 +1,37 @@
-.footer-main
-  background #001B36
-  color #fff
-  padding 70px 0
+footer.footer
+  padding-top 38px
+  text-align center
 
-  .base-col
-    clearfix()
+  .icons
+    padding-bottom 57px
+
+    img
+      display inline-block
+      width 94px
+      margin 0 4px
+
+  .headline
+    @extend .header-description .content .headline
+    font-size 50px
+    line-height 40px
+    padding-bottom 18px
+
+  .subheadline
+    @extend .header-description .content .subheadline
+    margin-bottom 13px
+
+  .description
+    @extend .header-description .text
+    max-width 590px
+    margin 0 auto
+
+  .share
+    padding 60px 0 75px
 
   .copyrights
-    float left
-    width 400px
+    padding 70px 0
 
-    .site-logo
-      margin-bottom 54px
 
-  .menu
-    width 360px
-    float left
-    font-size 0
-
-    ul
-      display inline-block
-      width 50%
-
-    a
-      color #fff
-      text-decoration none
-      font-size 16px
-      line-height 37px
-      opacity .7
-      transition opacity .2s
-
-      &:hover
-        opacity 1
-
-  .social
-    width 250px
-    font-size 16px
-    float right
-
-    .icon
-      display inline-block
-      vertical-align middle
-      position relative
-      width 48px
-      height 48px
-
-      &:before
-        content ''
-        display inline-block
-        position absolute
-        left 50%
-        top 50%
-        transform translate(-50%,-50%)
-
-      &.fb:before
-        sprite($s-fb)
-
-      &.tw:before
-        sprite($s-tw)
-
-      &.yb:before
-        sprite($s-yb)
-
-      &.gp:before
-        sprite($s-gp)
-
-    .icons
-      margin-top 12px
-      margin-left -12px
+.logo
+  display inline-block
+  sprite($s-logo)

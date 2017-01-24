@@ -1,0 +1,72 @@
+.versions
+  font-size 0
+  margin 20px -20px 0
+
+  .version
+    display inline-block
+    width calc(50% - 40px)
+    margin 0 20px
+    padding 56px 0 60px
+    border-radius 10px
+    font-size 16px
+    text-align center
+    color $white
+
+    .headline
+      position relative
+      font-size 40px
+      line-height 40px
+      padding-bottom 4px
+      font-family 'Helvetica Rounded'
+
+      b
+        position relative
+        z-index 1
+
+      .count
+        position absolute
+        z-index 0
+        top 0
+        transform translate(-10px, -14px)
+        display inline-block
+        background rgba(0,0,0,.15)
+        color $white
+        font-size 16px
+        line-height 32px
+        width 29px
+        height 29px
+        border-radius 50%
+        text-align center
+
+    .subheadline
+      font-size 15px
+      padding-bottom 24px
+      font-family 'Helvetica Rounded'
+
+    .icons
+      padding-bottom 24px
+
+      img
+        display inline-block
+        margin 0 5px
+        width 64px
+        border-radius 50%
+        border 2px solid $white
+
+    .description
+      font-weight 300
+      font-size 15px
+      line-height 30px
+      padding-bottom 30px
+
+    &.aqua
+      background $aqua
+
+      .btn
+        color $aqua
+
+    &.red
+      background $red
+
+      .btn
+        color $red
