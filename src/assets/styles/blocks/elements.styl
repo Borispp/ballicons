@@ -5,10 +5,21 @@
   padding 15px 40px
   border-radius 30px
   text-decoration none
+  position relative
+  transition background .15s linear, color .15s linear
+
+  &:active
+    top 1px
 
   &.violet
     background $violet
     color $white
+
+    &:hover
+      background $violet-dark
+
+    &:active
+      background $violet-darker
 
   &.book
     &:before
@@ -25,6 +36,14 @@
 
   &.white
     background $white
+
+    &:hover
+      background rgba(0,0,0,.15)
+      color $white
+
+    &:active
+      background rgba(0,0,0,.3)
+      color $white
 
 
 .link
