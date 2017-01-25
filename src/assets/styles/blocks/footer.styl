@@ -29,9 +29,55 @@ footer.footer
     padding 60px 0 75px
 
   .copyrights
-    padding 70px 0
+    padding 70px 0 120px
 
 
 .logo
   display inline-block
   sprite($s-logo)
+
+@media (max-width 1000px)
+  footer.footer
+    padding-top 48px
+
+    .headline
+      font-size 40px
+      padding-bottom 15px
+
+    .subheadline
+      font-size 20px
+
+    .share
+      padding 42px 0 54px
+
+    .copyrights
+      padding 52px 0 90px
+
+@media (max-width 720px)
+  footer.footer
+    padding-top 14px
+
+    .icons
+      padding-bottom 10px
+
+      img
+        width 84px
+        margin 0 4px
+
+    .headline
+      font-size 30px
+      padding-bottom 11px
+
+    .subheadline
+      font-size 14px
+      margin-bottom 7px
+
+    .description
+      font-size 15px
+      line-height 26px
+
+    .share
+      padding 35px 0 38px
+
+    .copyrights
+      padding 36px 0 60px

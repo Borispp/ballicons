@@ -51,3 +51,54 @@
       background $red
       color $white
       border-radius 50%
+
+@media (max-width 1100px)
+  .header
+    h1.headline
+      font-size 190px
+      margin-top 90px
+      margin-bottom 40px
+
+@media (max-width 1000px)
+  .header
+    h1.headline
+      font-size 140px
+      margin-top 50px
+      margin-bottom 0
+
+      span.count
+        width 52px
+        height 52px
+        right -44px
+        top -26px
+        font-size 29px
+        line-height 60px
+
+@media (max-width 720px)
+  .announce
+    height auto
+    line-height 20px
+    padding 20px 0
+
+    .emoji
+      display none
+
+  .header
+    position relative
+
+    h1.headline
+      font-size 60px
+      line-height 66px
+
+      .name:after
+        transform scale(.32)
+        top -30px
+        right -28px
+
+      span.count
+        width 23px
+        height 23px
+        font-size 13px
+        line-height 26px
+        right -16px
+        top -13px
