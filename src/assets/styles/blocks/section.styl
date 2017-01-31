@@ -10,6 +10,7 @@
 
   &.right
     padding-left 68px
+    transform translate(-20px, 0)
 
     .content
       width 400px
@@ -22,6 +23,7 @@
       width 378px
 
   &.left
+    transform translate(-20px, 0)
 
     .content
       width 430px
@@ -68,7 +70,6 @@
       width 410px
       text-align center
       margin 0 auto
-      transform translate(5px, 0)
 
     .img-left,
     .img-right
@@ -191,17 +192,30 @@
 .image-left
   position relative
 
+  &:after
+    content ''
+    display block
+    position absolute
+    right -140px
+    top -90px
+    background url('../images/content/diamond2.png')
+    width 277px
+    height 230px
+    background-size 277px 230px
+    background-position 0 0
+
+
   &:before
     content ''
     display block
     position absolute
     left 0
-    top 0
+    top 24px
     background url('../images/content/img.png')
     width 133px
     height 228px
     background-size 133px 228px
-    background-position 0 30px
+    background-position 0 0
 
 
 .icons-list
@@ -234,7 +248,7 @@
 
     &.left
       right auto
-      left 10px
+      left -30px
       transform translate(-100%, 0)
 
       &:before
@@ -270,9 +284,15 @@
   .icons-list .notice
     display none !important
 
-@media (max-width 1100px)
-  .image-left:before
+@media (max-width 1170px)
+  .image-left:after
     display none
+    
+@media (max-width 1100px)
+  .image-left
+    &:before,
+    &:after
+      display none
 
 @media (max-width 1000px)
   .section
@@ -280,6 +300,7 @@
 
   .header-description.right
     padding-left 0
+    transform translate(0, 0)
 
     .content,
     .description
@@ -290,6 +311,7 @@
       text-align center
 
   .header-description.left
+    transform translate(0, 0)
     .content
       width 55%
       padding-left 0
@@ -343,7 +365,8 @@
         line-height 28px
 
         .presaved
-          margin-top 16px
+          display block
+          margin 16px auto
 
   .header-description .content .subheadline .underline:before, footer.footer .subheadline .underline:before
     display none
@@ -384,6 +407,10 @@
       margin-bottom 33px
 
 @media (max-width 720px)
+
+  .header h1.headline.-active .name:after
+    transform translate(0, 0) scale(0.32) !important
+
   .section
     padding-bottom 44px
 
@@ -486,10 +513,9 @@
         padding-top 34px
 
   .icons-list
-    width calc(100% + 20px)
+    width 100%
     max-width 380px
     margin 34px auto 0
-    transform translate(-10px, 0)
 
     li
       width 33.33%

@@ -28,8 +28,19 @@
     text-align center
     position relative
 
+    &.-active
+      .name:after
+        opacity 1
+        transform translate(0, 0)
+
     .name
       position relative
+      display inline-block
+      background url('../images/content/logo.png')
+      width 871px
+      height 150px
+      background-size 871px 150px
+      background-repeat no-repeat
 
       &:after
         content ''
@@ -38,6 +49,10 @@
         top -5px
         right 34px
         sprite($s-skate)
+        opacity 0
+        transform translate(-200px, 30px)
+        transition all .25s
+        transition-delay .25s
 
     span.count
       position absolute
@@ -55,16 +70,28 @@
 @media (max-width 1100px)
   .header
     h1.headline
-      font-size 190px
+      // font-size 190px
       margin-top 90px
       margin-bottom 40px
+
+      .name
+        background url('../images/content/logo.png')
+        width 784px
+        height 136px
+        background-size 784px 136px
 
 @media (max-width 1000px)
   .header
     h1.headline
-      font-size 140px
-      margin-top 50px
-      margin-bottom 0
+      // font-size 140px
+
+      margin-top 83px
+      margin-bottom 63px
+
+      .name
+        width 610px
+        height 105px
+        background-size 610px 105px
 
       span.count
         width 52px
@@ -89,6 +116,13 @@
     h1.headline
       font-size 60px
       line-height 66px
+      margin-top: 52px;
+      margin-bottom: 18px;
+
+      .name
+        width 261px
+        height 45px
+        background-size 261px 45px
 
       .name:after
         transform scale(.32)

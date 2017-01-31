@@ -2,7 +2,7 @@
   display inline-block
   font-size 18px
   letter-spacing .25px
-  padding 15px 40px
+  padding 16px 30px 14px
   border-radius 30px
   text-decoration none
   position relative
@@ -22,6 +22,7 @@
       background $violet-darker
 
   &.book
+    padding 16px 30px 14px 42px
     &:before
       content ''
       display inline-block
@@ -32,7 +33,7 @@
   &.default
     font-size 18px
     font-weight 500
-    padding 15px 32px
+    padding 16px 32px 14px
 
   &.white
     background $white
@@ -54,6 +55,15 @@
   &:hover
     color $red
 
+.element
+  opacity 0
+  transform translate3d(0,100px,0)
+  transition all .4s
+
+  &.-active
+    opacity 1
+    transform translate3d(0,0,0)
+
 @media (max-width 1000px)
   .btn
     padding 13px 24px 12px 32px
@@ -61,3 +71,7 @@
 
     &.book:before
       transform translate(-10px, -2px)
+
+  .element
+    opacity 1
+    transform translate3d(0,0,0)
