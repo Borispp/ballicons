@@ -21,38 +21,102 @@
   h1.headline
     font-size 200px
     line-height 200px
-    margin-top 128px
-    margin-bottom 60px
+    padding-top 128px
+    height 150px
+    padding-bottom 60px
     color $violet
     font-family 'Helvetica Rounded'
     text-align center
     position relative
+    overflow hidden
 
     &.-active
-      .name:after
-        opacity 1
-        transform translate(0, 0)
+
+      .name.-rose,
+      .name.-blue,
+      .name.-green
+        &:after,
+        &:before
+          opacity 1
+          transform translate(0, 0)
+
+    .headline-title
+      display inline-block
+      position relative
+      width 871px
 
     .name
-      position relative
+      position absolute
+      z-index 2
+      left 50%
+      transform translate(-50%, 0)
       display inline-block
-      background url('../images/content/logo.png')
       width 871px
       height 150px
       background-size 871px 150px
       background-repeat no-repeat
+      transition opacity .4s
 
-      &:after
-        content ''
-        display block
-        position absolute
-        top -5px
-        right 34px
-        sprite($s-skate)
+      &.-hide
         opacity 0
-        transform translate(-200px, 30px)
-        transition all .25s
-        transition-delay .25s
+        z-index 1
+
+      &.-blue
+        background-image url('../images/content/logo.png')
+
+        &:after
+          content ''
+          display block
+          position absolute
+          top -5px
+          right 24px
+          sprite($s-skate)
+          opacity 0
+          transform translate(-100px, 30px)
+          transition all .25s
+          transition-delay .25s
+
+      &.-rose
+        background-image url('../images/content/logo-rose.png')
+
+        &:after
+          content ''
+          display block
+          position absolute
+          bottom -20px
+          left calc(50% + 96px)
+          sprite($s-paris)
+          opacity 0
+          transform translate(-200px, 30px)
+          transition all .25s
+          transition-delay .25s
+
+        &:before
+          content ''
+          display block
+          position absolute
+          bottom -18px
+          left -48px
+          sprite($s-liberty)
+          opacity 0
+          transform translate(-200px, 30px)
+          transition all .25s
+          transition-delay .25s
+
+      &.-green
+        background-image url('../images/content/logo-green.png')
+
+        &:after
+          content ''
+          display block
+          position absolute
+          bottom -25px
+          left calc(50% + 40px)
+          sprite($s-pig)
+          opacity 0
+          transform translate(-200px, 30px)
+          transition all .25s
+          transition-delay .25s
 
     span.count
       position absolute
@@ -71,22 +135,41 @@
   .header
     h1.headline
       // font-size 190px
-      margin-top 90px
-      margin-bottom 40px
+      padding-top 90px
+      padding-bottom 40px
+      height 136px
+
+      .headline-title
+        width 784px
 
       .name
-        background url('../images/content/logo.png')
         width 784px
         height 136px
         background-size 784px 136px
+
+      &.-active
+        .name.-rose,
+        .name.-green
+          &:after,
+          &:before
+            transform translate(0,0) scale(0.9)
+
+        .name.-rose
+          &:after
+            left calc(50% + 80px)
+
 
 @media (max-width 1000px)
   .header
     h1.headline
       // font-size 140px
 
-      margin-top 83px
-      margin-bottom 63px
+      padding-top 83px
+      height 105px
+      padding-bottom 63px
+
+      .headline-title
+        width 610px
 
       .name
         width 610px
@@ -100,6 +183,17 @@
         top -26px
         font-size 29px
         line-height 60px
+
+      &.-active
+        .name.-rose,
+        .name.-green
+          &:after,
+          &:before
+            transform translate(0,0) scale(0.85)
+
+        .name.-rose
+          &:after
+            left calc(50% + 50px)
 
 @media (max-width 720px)
   .announce
@@ -116,15 +210,19 @@
     h1.headline
       font-size 60px
       line-height 66px
-      margin-top: 52px;
-      margin-bottom: 18px;
+      padding-top 52px
+      padding-bottom 18px
+      height 45px
+
+      .headline-title
+        width 261px
 
       .name
         width 261px
         height 45px
         background-size 261px 45px
 
-      .name:after
+      .name.-blue:after
         transform scale(.32)
         top -30px
         right -28px
@@ -136,3 +234,24 @@
         line-height 26px
         right -16px
         top -13px
+
+      &.-active
+        .name.-rose,
+        .name.-green
+          &:after,
+          &:before
+            transform translate(0,0) scale(0.5) !important
+
+        .name.-rose
+          &:after
+            left calc(50% - 11px)
+            bottom -42px
+
+          &:before
+            left -54px
+            bottom -42px
+
+        .name.-green
+          &:after
+            left calc(50% - 11px)
+            bottom -42px

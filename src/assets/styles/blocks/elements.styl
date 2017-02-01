@@ -64,6 +64,52 @@
     opacity 1
     transform translate3d(0,0,0)
 
+.buttons
+  position fixed
+  z-index 1
+  top 20px
+  right 20px
+
+  .btn-rounded
+    margin-bottom 18px
+
+.btn-rounded
+  display block
+  background $white
+  width 65px
+  height 65px
+  border-radius 50%
+  box-shadow 0 3px 5px rgba(0,0,0,.3)
+  text-align center
+  line-height 72px
+  text-decoration none
+  font-size 22px
+  font-family 'Helvetica Rounded'
+  position relative
+  top 0
+
+  &:active
+    top 1px
+
+  &.-blue
+    background $violet
+    color $white
+    transition background .2s
+
+    &:hover
+      background #4437eb
+
+    &:active
+      background #2e23be
+
+  img
+    max-width 35px
+    margin-top 20px
+
+@media (max-width 1600px)
+  .buttons
+    display none
+
 @media (max-width 1000px)
   .btn
     padding 13px 24px 12px 32px
