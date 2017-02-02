@@ -33,6 +33,7 @@
     &.-active
 
       .name.-rose,
+      .name.-blueg,
       .name.-blue,
       .name.-green
         &:after,
@@ -46,6 +47,7 @@
       width 871px
 
     .name
+      cursor pointer
       position absolute
       z-index 2
       left 50%
@@ -79,6 +81,14 @@
             opacity 0
             transform translate(0, 100px)
 
+        &.-blueg
+          &:before
+            opacity 0
+            transform translate(-100px, 0)
+          &:after
+            opacity 0
+            transform translate(-100px, 100px)
+
       &.-blue
         background-image url('../images/content/logo.png')
 
@@ -91,7 +101,7 @@
           sprite($s-skate)
           opacity 0
           transform translate(-100px, 30px)
-          transition all .25s
+          transition all .35s
           transition-delay .25s
 
       &.-rose
@@ -106,7 +116,7 @@
           sprite($s-paris)
           opacity 0
           transform translate(-200px, 30px)
-          transition all .25s
+          transition all .35s
           transition-delay .25s
 
         &:before
@@ -118,7 +128,34 @@
           sprite($s-liberty)
           opacity 0
           transform translate(-200px, 30px)
-          transition all .25s
+          transition all .35s
+          transition-delay .25s
+
+      &.-blueg
+        background-image url('../images/content/logo-blue.png')
+
+        &:after
+          content ''
+          display block
+          position absolute
+          bottom 70px
+          left calc(50% + 106px)
+          sprite($s-avia)
+          opacity 0
+          transform translate(-100px, 100px)
+          transition all .35s
+          transition-delay .25s
+
+        &:before
+          content ''
+          display block
+          position absolute
+          bottom -18px
+          left 60px
+          sprite($s-auto)
+          opacity 0
+          transform translate(-300px, 30px)
+          transition all .35s
           transition-delay .25s
 
       &.-green
@@ -167,6 +204,7 @@
 
       &.-active
         .name.-rose,
+        .name.-blueg,
         .name.-green
           &:after,
           &:before
@@ -204,6 +242,7 @@
 
       &.-active
         .name.-rose,
+        .name.-blueg,
         .name.-green
           &:after,
           &:before
@@ -255,12 +294,22 @@
 
       &.-active
         .name.-rose,
+        .name.-blueg,
         .name.-green
           &:after,
           &:before
             transform translate(0,0) scale(0.5) !important
 
         .name.-rose
+          &:after
+            left calc(50% - 11px)
+            bottom -42px
+
+          &:before
+            left -54px
+            bottom -42px
+
+        .name.-blueg
           &:after
             left calc(50% - 11px)
             bottom -42px
