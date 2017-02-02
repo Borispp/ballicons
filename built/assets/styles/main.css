@@ -991,6 +991,26 @@ footer.footer .description .btn {
   opacity: 0;
   z-index: 1;
 }
+.header h1.headline .name.-hide.-rose:after {
+  opacity: 0;
+  -webkit-transform: translate(0, -100px);
+          transform: translate(0, -100px);
+}
+.header h1.headline .name.-hide.-rose:before {
+  opacity: 0;
+  -webkit-transform: translate(-100px, 0);
+          transform: translate(-100px, 0);
+}
+.header h1.headline .name.-hide.-blue:after {
+  opacity: 0;
+  -webkit-transform: translate(-100px, 30px);
+          transform: translate(-100px, 30px);
+}
+.header h1.headline .name.-hide.-green:after {
+  opacity: 0;
+  -webkit-transform: translate(0, 100px);
+          transform: translate(0, 100px);
+}
 .header h1.headline .name.-blue {
   background-image: url("../images/content/logo.png");
 }

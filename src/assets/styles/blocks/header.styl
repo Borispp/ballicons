@@ -61,6 +61,24 @@
         opacity 0
         z-index 1
 
+        &.-rose
+          &:after
+            opacity 0
+            transform translate(0, -100px)
+          &:before
+            opacity 0
+            transform translate(-100px, 0)
+
+        &.-blue
+          &:after
+            opacity 0
+            transform translate(-100px, 30px)
+
+        &.-green
+          &:after
+            opacity 0
+            transform translate(0, 100px)
+
       &.-blue
         background-image url('../images/content/logo.png')
 
